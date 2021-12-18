@@ -1,0 +1,13 @@
+{:deps {org.clojure/clojure {:mvn/version "1.10.2"}
+        org.clojure/tools.logging {:mvn/version "1.1.0"}
+        ring/ring-jetty-adapter {:mvn/version "1.8.2"}
+        metosin/reitit {:mvn/version "0.5.11"}
+        ring-cors/ring-cors {:mvn/version "0.1.13"}
+        ring/ring-devel {:mvn/version "1.9.0"}
+        local/fit {:mvn/version "1.0.0"}}
+
+ :paths ["src" "target" "resources"]
+ :aliases
+ {:build-dev
+  {:main-opts ["-m" "pb-training-svc.server"]
+   :jvm-opts ["-Dclojure.server.repl={:port,50505,:accept,clojure.core.server/repl}"]}}}
